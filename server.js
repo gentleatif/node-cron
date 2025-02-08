@@ -9,10 +9,8 @@ app.get('/', (req, res) => {
   res.send('Hello, World!')
 })
 
-// run cron job every  30 seconds
-
-cron.schedule('* * * * *', () => {
-  console.log('running a task every minute')
+cron.schedule('0 */20 * * * *', () => {
+  console.log('running a task every 20 minutes')
 })
 
 app.listen('3000', (req, res) => {
