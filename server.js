@@ -5,6 +5,7 @@ const cron = require('node-cron')
 const app = express()
 
 app.get('/', (req, res) => {
+  console.log('hello world!')
   res.send('Hello, World!')
 })
 
